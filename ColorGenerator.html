@@ -1,0 +1,41 @@
+<html>
+<title>
+</title>
+<style type="text/css">
+
+</style>
+<body id="body">
+<center>
+<div id="main" style="border: 1px solid black;">
+<input type="button" value="Change Color" onclick="changeColor()">
+</div>
+</center>
+</body>
+<script type="text/javascript">
+  function changeColor(){
+  	var rColor = Math.floor(Math.random()* 256);
+  	var gColor = Math.floor(Math.random()* 256);
+  	var bColor = Math.floor(Math.random()* 256);
+  	
+  	var red = rColor.toString(16);
+  	var green = gColor.toString(16);
+  	var brown = bColor.toString(16);
+
+  	if(red.length == 1){
+  		red  = '0' + red ;
+  	}
+
+  	if(green.length == 1){
+  		green  = '0' + green ;
+  	}
+
+  	if(brown.length == 1){
+  		brown  = '0' + brown ;
+  	}
+
+    var color = "#"+red + green + brown;
+    var fc = color.toString();
+    document.body.style.backgroundColor = fc
+  }
+</script>
+</html>
